@@ -38,6 +38,6 @@ To create a new Module:
 
 To create a new Component within that Module:
 - `cd newModuleName` to change directory into the newModule folder
-- `ng g component newComponent` to create a component as a child of the module
+- `ng g component newComponentName` to create a component as a child of the module
 
 From there, you can implement your new module/component. Don't forget to wire up your component to the module, and finally wire up your module to your app. 
