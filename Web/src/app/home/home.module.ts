@@ -22,4 +22,5 @@ const homeRouting: ModuleWithProviders = RouterModule.forChild([
   ],
   providers : []
 })
+
 export class HomeModule { }
