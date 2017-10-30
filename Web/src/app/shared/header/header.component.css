@@ -1,0 +1,10 @@
+.navbar {
+    position: relative;
+    padding: 0.5rem 1rem;
+}
+
+@media (min-width: 544px) {
+    .navbar {
+        border-radius: 0.25rem;        
+    }
+}
