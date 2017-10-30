@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+
+import { ComicsService } from '../../shared/comics.service';
+import { Comic } from '../../shared/comic';
 
 @Component({
   selector: 'app-comic-list',
@@ -6,4 +9,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./comic-list.component.css']
 })
 
-export class ComicListComponent { }
+export class ComicListComponent implements OnInit {
+    comics: Array<Comic> = [];
+
+    constructor(private comicsService: ComicsService
+    ) { }
+
+    ngOnInit() {
+      this.comicsService.getComics()
+        .subscribe((comics) => {
+          this.comics = comics;
+        });
+    }
+}
