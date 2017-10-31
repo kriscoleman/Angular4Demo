@@ -5,7 +5,7 @@ import { Observable } from 'rxjs/Observable';
 import { Subject } from 'rxjs/Subject';
 import { Subscription } from 'rxjs/Subscription';
 
-import { AppConfig } from './../app.config';
+import { environment } from '../../environments/environment';
 import { Comic } from './comic';
 
 @Injectable()
@@ -15,6 +15,6 @@ export class ComicsService {
   }
 
   getComics(): Observable<[Comic]> {
-    return this.http.get<[Comic]>(AppConfig.ApiBase + '/api/comics');
+    return this.http.get<[Comic]>(environment.ApiBase + '/api/comics');
   }
 }
